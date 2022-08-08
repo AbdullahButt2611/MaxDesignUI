@@ -1,0 +1,254 @@
+/*  */
+
+
+/* ================             CSS Varaibles   ============================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+:root{
+
+    --header-height: 3rem;
+
+    /*              Colors / Theme          */
+    --first-color: #000;
+    --first-color-light: rgb(16, 16, 16);
+    --first-color-lighten: #e0e0e0; 
+    --first-color-alt: #8a7968;
+    --text-color: white;
+    --text-color-light: #e0e0e0; 
+    --default-color: #7E0c17;
+
+
+    /*              Typographhy          */
+    --body-font: 'Poppins', sans-serif;
+    --h1-font-size: 1.75rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1.1rem;
+    --small-font-size: 0.938rem;
+    --smaller-font-size: 0.85rem;
+
+    /*              Font weight          */
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+    /*===== Margenes =====*/
+    --mb-1: 0.5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+
+    /*===== z index =====*/
+    --z-fixed: 100;
+}
+
+@media screen and (min-width: 768px) {
+    :root{
+        --h1-font-size: 2.5rem;
+        --h2-font-size: 1.75rem;
+        --h3-font-size: 1.5rem;
+        --normal-font-size: 1.25rem;
+        --small-font-size: 1rem;
+        --smaller-font-size: 0.95rem;
+    }
+}
+
+/*===== BASE =====*/
+*, ::before, ::after{
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+    font-family: var(--body-font);
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+    background-color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3, p{
+    margin: 0;
+}
+
+h3{
+    font-weight: var(--font-semi-bold);
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*===== CLASS CSS ===== */
+
+.section{
+    padding: 4rem 0 2rem;
+}
+
+
+
+
+
+/*===== Header ===== */
+header{
+    display: flex;
+    background-color: var(--first-color);
+    justify-content: space-around;
+    padding: 1rem 0;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 200px;
+}
+
+.nav__list{
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    padding-bottom: 0.5rem;
+    column-gap: 2rem;
+}
+
+.nav__link{
+    color: var(--text-color-light);
+    border-radius: 5px;
+    transition: color 0.4s;
+}
+
+.nav__link:hover{
+    color: var(--text-color);
+    border-bottom: 3px solid var(--default-color);
+}
+
+.header__toggle, .header__close{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    header{
+        height: 48px;
+        justify-content: space-between;
+        padding: 0 28px;
+    }
+
+    .logo img{
+        width: 110px;
+    }
+
+    .header__toggle{
+        margin: auto;
+        margin-right: -1rem;
+        display: inline;
+        color: var(--text-color-light);
+        font-size: var(--h2-font-size);
+    }
+
+    .header__close{
+        position: absolute;
+        right: 24px;
+        display: block;
+        padding: 0.5rem;
+        font-size: var(--h2-font-size);
+        border-radius: 50%;
+        color: var(--text-color-light);
+    }
+
+    .header__close:hover{
+        background-color: var(--first-color-light);
+    }
+
+    .nav{
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: var(--first-color);
+        width: 60%;
+        height: 100vh;
+        padding: 24px 0;
+        z-index: var(--z-fixed);
+        border-radius: 0 0 0 50%;
+        transition: 0.4s;
+    }
+
+    .nav__list{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav__item{
+        margin: 2rem 0;
+    }
+
+    .show{
+        right: 0;
+    }
+}
+
+
+/*===== Welcome ===== */
+.welcome{
+    height: 87.5vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.95)),url("../img/bg1.jpg");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+
+    animation-name: animate;
+    animation-direction: alternate-reverse;
+    animation-duration: 30s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes animate {
+    0%{
+        background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.95)),url("../img/bg2.jpg");
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+    }
+    40%{
+        background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.95)),url("../img/bg4.jpg");
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+    }
+    100%{
+        background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.95)),url("../img/bg1.jpg");
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+    }
+}

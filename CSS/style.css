@@ -394,3 +394,150 @@ header{
 
 }
 
+/* ====================================     Footer  ================================ */
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0;
+    row-gap: 2rem;
+    background: var(--first-color);
+    color: var(--text-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.upperFooter{
+    font-size: var(--h1-font-size);
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+.lowerFooter{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: var(--smaller-font-size);
+    color: var(--text-color-light);
+}
+
+.socialLink{
+    height: 40px;
+    width: 40px;
+    /* padding: 1rem; */
+    background-color: var(--text-color);
+    margin: 5px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.socialLink i{
+    font-size: 1.3rem;
+    justify-self: center;
+    color: var(--default-color);
+}
+
+.socialLink:hover{
+    background-color: var(--default-color);
+}
+
+.socialLink:hover i{
+    color: var(--text-color);
+}
+
+
+/* Discussion section */
+
+.discussion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.5rem;
+    background: url("http://maxdesigns.ae/wp-content/uploads/2022/06/bg_white_marble.jpg");
+    background-attachment: fixed;
+}
+
+.discussion .redLine{
+    width: 14%;
+}
+
+.discussionTitle{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: var(--h2-font-size);
+}
+
+.discussionSubtitle{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: var(--h3-font-size);
+    color: var(--first-color-light);
+}
+
+.discuss{
+    width: 60%;
+    text-align: justify;
+}
+
+@media screen and (max-width: 860px) {
+    .mission{
+        flex-direction: column;
+    }
+
+    .missionLeft, .missionRight{
+        width: 100%;
+    }
+
+    .missionLeft > div{
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .missionLefttitle{
+        text-align: center;
+    }
+
+    .missionTitle{
+        text-align: center;
+        width: 100%;
+    }
+
+    .missionDescription{
+        width: 90%;
+        text-align: center;
+    }
+
+    .discuss{
+        width: 90%;
+    }
+
+    .lowerFooter{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .upperFooter{
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .transparentButton{
+        text-align: center;
+        max-width: 90%;
+        width: 80%;
+        font-size: 0.75rem;
+    }
+}

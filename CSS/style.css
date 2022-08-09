@@ -102,14 +102,91 @@ img{
     display: block;
 }
 
+
+
 /*===== CLASS CSS ===== */
 
 .section{
     padding: 4rem 0 2rem;
 }
 
+.l-section{
+    padding: 4rem 4rem;
+}
+
+.separationQuote{
+    background-color: var(--first-color-lighten);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.quoteText{
+    font-size: var(--h3-font-size);
+    color: var(--first-color-light);
+}
+
+.quoteRefer{
+    color: #7E0c17;
+    justify-content: right;
+    font-size: var(--h2-font-size);
+}
 
 
+.redLine{
+    height: 2px;
+    width: 40%;
+    background-color: var(--default-color);
+}
+
+
+/* ==================    Buttons    =========================*/
+.transparentButton{
+    background: transparent;
+    border: 2px solid var(--text-color-light);
+    color: var(--text-color-light);
+    transition: 0.3s;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 1.3rem 1rem;
+    max-width: 70%;
+    position: relative;
+}
+
+.transparentButton::before,
+.transparentButton::after{
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: inherit;
+    transition: all .5s;
+}
+
+.transparentButton::before{
+    top: -15px;
+    left: -15px;
+    border-width: 3px 0 0 3px;
+}
+
+.transparentButton::after{
+    bottom: -15px;
+    right: -15px;
+    border-width: 0 3px 3px 0;
+}
+
+.transparentButton:hover::before,
+.transparentButton:hover::after{
+    width: calc(100% + 29px);
+    height: calc(100% + 29px);
+}
+
+.transparentButton:hover{
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+    text-shadow: 0 0 var(--text-color);
+}
 
 
 /*===== Header ===== */
@@ -213,7 +290,9 @@ header{
 }
 
 
-/*===== Welcome ===== */
+/*==================================== Welcome Page ======================================= */
+
+/* First Section */
 .welcome{
     height: 87.5vh;
     width: 100%;
@@ -222,6 +301,9 @@ header{
     background-position: bottom;
     background-repeat: no-repeat;
     transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     animation-name: animate;
     animation-direction: alternate-reverse;
@@ -252,3 +334,63 @@ header{
         background-repeat: no-repeat;
     }
 }
+
+
+.welcomeDark{
+    background-color: rgba(0, 0, 0, 0.55);
+    padding: 4rem 2rem 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcomeDark img{
+    width: 70%;
+}
+
+
+/* Second Section */
+.mission{
+    background: url("http://maxdesigns.ae/wp-content/uploads/2022/06/bg_black_marble.jpg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+}   
+
+.missionLeft, .missionRight{
+    margin: 4rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 1rem;
+    width: 50%;
+   
+}
+
+
+
+.missionLefttitle{
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-size: var(--h1-font-size);
+    width: 100%;
+    font-weight: 300;
+}
+.missionTitle{
+    color: var(--text-color);
+    font-size: var(--normal-font-size);
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 2rem 0 3rem;
+}
+
+
+.missionDescription{
+    color: var(--text-color-light);
+    width: 70%;
+    text-align: justify;
+
+}
+

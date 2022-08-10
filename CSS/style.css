@@ -141,6 +141,22 @@ img{
 }
 
 
+.flexContainer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.verticalFlexContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+
 /* ==================    Buttons    =========================*/
 .transparentButton{
     background: transparent;
@@ -188,6 +204,19 @@ img{
     text-shadow: 0 0 var(--text-color);
 }
 
+
+.blackFillButton{
+    padding: 0.5rem 2rem;
+    border: 2px solid var(--first-color);
+    background-color: var(--text-color);
+    color: var(--first-color);
+    transition: 0.4s;
+}
+
+.blackFillButton:hover{
+    background-color: var(--first-color);
+    color: var(--text-color);
+}
 
 /*===== Header ===== */
 header{
@@ -539,5 +568,252 @@ footer{
         max-width: 90%;
         width: 80%;
         font-size: 0.75rem;
+    }
+}
+
+
+
+/* ====================================     About  ================================ */
+
+/* First Section */
+.about{
+    background-image: linear-gradient(60deg, #252b32 00%, #252b32 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    flex-direction: column;
+}
+
+@keyframes animated-bg {
+    0%{
+        background-position: 0 50%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+.aboutTitle{
+    font-size: var(--h1-font-size);
+    text-transform: uppercase;
+    font-weight: var(--font-bold);
+    color: var(--text-color);
+    transform: scale(1.5);
+    background-image: linear-gradient(60deg, var(--default-color) 0%, var(--text-color) 100%);
+    background-size: 400% 400%;
+    animation: animated-bg 10s infinite ease-in-out;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.about .redLine{
+    margin-top: 1.5rem;
+    width: 20%;
+    height: 4px;
+}
+
+/* story section */
+.leftStory, .rightStory{
+    padding: 2rem;
+    width: 50%;
+}
+
+.rightStory img{
+    border-radius: 0.9rem;
+    box-shadow: 0 0 100px -50px var(--first-color-light);
+}
+
+.storyTitle{
+    font-size: var(--h1-font-size);
+    color: var(--default-color);
+    text-transform: uppercase;
+}
+
+.storyDescription{
+    text-align: justify;
+    color: var(--first-color-light);
+}
+
+.aboutImplementation{
+    background: url("http://maxdesigns.ae/wp-content/uploads/2022/06/bg_white_marble.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: cover;
+    padding: 4rem 2rem;
+}
+
+.rightImplement img{
+    border-radius: 0.9rem;
+    box-shadow: 0 0 100px -50px var(--first-color-light);
+}
+
+.leftImplement{
+    padding: 0 3rem;
+}
+
+.implementTitle{
+    font-size: var(--h2-font-size);
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: var(--default-color);
+}
+
+.implementDescription{
+    text-align: justify;
+    width: 85%;
+}
+
+
+.orderImplement .rightImplement{
+    order: 1;
+}
+
+.orderImplement .leftImplement{
+    order: 2;
+}
+
+/* count section */
+.aboutProjects{
+    background-color: var(--first-color-alt);
+}
+
+.projectCountContaier{
+    background-color: var(--text-color);
+    border-radius: .5rem;
+    padding: 4rem 2rem;
+    box-shadow: 0 0 70px -50px var(--first-color-light);
+}
+
+.aboutProject__title{
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: var(--h2-font-size);
+}
+
+.aboutProject__subtitle{
+    text-transform: uppercase;
+    font-size: var(--h3-font-size);
+    font-weight: 600;
+}
+
+.aboutProject__content{
+    padding: 4rem 2rem;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+.aboutProject__contentBox{
+    min-width: 30%;
+    column-gap: 1rem;
+}
+
+.aboutProject__contentBox img{
+    width: 40%;
+}
+
+.aboutContext__title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4rem;
+    color: var(--default-color);
+    font-weight: 100;
+    line-height: 4rem;
+}
+
+.aboutContext__description{
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--first-color-light);
+    font-weight: 100;
+    text-align: center;
+    margin-top: 0;
+}
+
+@media screen and (max-width: 1155px) {
+    .aboutStory{
+        flex-direction: column-reverse;
+    }
+
+    .rightStory, .leftStory{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .aboutStory{
+        flex-direction: column-reverse;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .rightStory, .leftStory{
+        width: 100%;
+    }
+
+    .orderImplement .rightImplement{
+        order: 2;
+    }
+    
+    .orderImplement .leftImplement{
+        order: 1;
+    }
+
+    .aboutImplement{
+        flex-direction: column-reverse;
+        row-gap: 1rem;
+    }
+
+    .leftImplement{
+        margin-bottom: var(--mb-5);
+    }
+
+    .aboutImplementation{
+
+        padding: 4rem 0rem;
+    }
+
+    .implementTitle{
+        text-align: center;
+    }
+
+    
+}
+
+@media screen and (max-width: 590px) {
+    .implementDescription{
+        text-align: center;
+        width: 100%;
+    }
+
+    .aboutProject__content{
+        padding: 4rem 0rem;
+    }
+
+    .aboutProject__title{
+        text-align: center;
+    }
+
+    .aboutProject__contentBox{
+        flex-direction: column;
+        margin-bottom: var(--mb-5);
+    }
+
+    .aboutProject__contentBox img{
+        width: 70%;
+        margin-bottom: var(--mb-3);
+    }
+}
+
+@media screen and (max-width: 375px){
+    .rightImplement img{
+        width: 80%;
+        margin: auto;
     }
 }

@@ -817,3 +817,406 @@ footer{
         margin: auto;
     }
 }
+
+
+/* ====================================     Contact  ================================ */
+/* First Section */
+.contactTouch{
+    background-attachment: fixed;
+    row-gap: 3rem;
+}
+
+.touchTitle{
+    text-align: center;
+    color: var(--first-color-light);
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: var(--h2-font-size);
+}
+
+.touchContainer{
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    row-gap: 2.5rem;
+}
+
+.touchContent{
+    height: 45vh;
+    width: 30%;
+    min-width: 275px;
+    padding: 2rem 2rem;
+    box-shadow: 0 0 27px -2px var(--text-color-light);
+    border-radius: 0.9rem;
+}
+
+.touchContent__title{
+    font-weight: 500;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.touchContent__description{
+    text-align: center;
+    font-weight: 300;
+    font-size: var(--smaller-font-size);
+    color: var(--text-color-light);
+}
+
+
+.touchContent{
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.touchContent:hover .touchContent__title, 
+.touchContent:hover .touchContent__description{
+    color: var(--first-color-light);
+}
+
+.touchContent::after, .touchContent::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--default-color);
+    z-index: -1;
+    border-radius: 10px;
+    transition: all 0.4s;
+}
+
+.touchContent::after{
+    background: var(--text-color-light);
+    transform-origin: right bottom;
+    transform: translate(10%, 10%) scale(0.3);
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+.touchContent:hover::after{
+    transform: translate(0) scale(1);
+    border-radius: 0;
+    border-radius: 10px;
+}
+
+.touchContent:hover::before{
+    transform-origin: right bottom;
+    transform: translate(10%, 10%) scale(0.3);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.touchContent__socialIcons{
+    display: inline-flex;
+    column-gap: 1rem;
+}
+
+.touchContent__socialIcon{
+    width: 30px;
+    height: 30px;
+    background-color: var(--text-color);
+    border-radius: 50%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.touchContent__socialIcon i{
+    color: var(--default-color);
+    font-size: var(--smaller-font-size);
+}
+
+
+/* Second Container */
+.contactFormContainer{
+    background-color: var(--text-color-light);
+}
+
+.contactForm__subtitle{
+    color: var(--first-color-light);
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: var(--small-font-size);
+}
+
+.contactForm__title{
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--first-color);
+    text-align: center;
+    font-size: var(--h2-font-size);
+}
+
+.contactForm{
+    width: 60%;
+}
+
+.inputs{
+    width: 100%;
+    justify-content: space-between;
+    column-gap: 2rem;
+}
+
+.inputs input, textarea{
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: none;
+    border-radius: 0.3rem;
+}
+
+.inputs input{
+    width: 100%;
+}
+
+textarea{
+    width: 100%;
+    resize: none;
+    height: 25vh;
+}
+
+.contactForm .blackFillButton{
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (max-width: 950px) {
+    .inputs{
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .contactForm{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 375px) {
+    .contactFormContainer{
+        padding: 4rem 1rem;
+    }
+}
+
+/* ====================================     User Profile  ================================ */
+.profileContainer{
+    background: url("http://maxdesigns.ae/wp-content/uploads/2022/06/bg_black_marble.jpg");
+    background-attachment: fixed;
+}
+
+.profileWrapper{
+    background-color: white;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 43px -3px rgba(255, 255, 255, 0.659);
+    border-radius: 7px;
+    gap: 3rem;
+    width: 80%;
+    
+}
+
+.profileContent{
+    row-gap: 3rem;
+}
+
+.profileContent img{
+    width: 20%;
+}
+
+.setContent{
+    row-gap: 1rem;
+    justify-content: left;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    box-shadow:  0 0 4px 3px rgba(183, 183, 183, 0.15);
+    padding: 4rem 4rem;
+    border-radius: 5px;
+}
+
+.setInfoTitle{
+    align-self: center;
+    color: var(--default-color);
+    font-size: var(--h3-font-size);
+}
+
+.setInfoDetailTitle{
+    color:var(--first-color-light) ;
+    font-size: var(--normal-font-size);
+}
+
+.setInfoDetailDesc{
+    font-size: var(--small-font-size);
+    color: var(--first-color-light);
+}
+
+.profileDetails{
+    width: 70%;
+    align-self: flex-start;
+    row-gap: 2rem;
+    align-items: flex-start;
+}
+
+.generalInfoContainer{
+    align-items: flex-start;
+    box-shadow:  0 0 4px 3px rgba(183, 183, 183, 0.15);
+    padding: 4rem 4rem;
+    width: 100%;
+}
+
+.profileName{
+    font-size: var(--h3-font-size);
+    line-height: var(--h2-font-size);
+}
+
+.profilePost{
+    font-size: var(--smaller-font-size);
+    color: var(--default-color);
+}
+
+
+.professionalInformation{
+    width: 100%;
+}
+
+.rankTitle{
+    color: gray;
+}
+
+.rankValue{
+    font-size: var(--h2-font-size);
+}
+
+.professionalInformation{
+    align-items: flex-start;
+    box-shadow:  0 0 4px 3px rgba(183, 183, 183, 0.15);
+    padding: 4rem 4rem;
+    gap: 2rem;
+}
+
+.contactTitle{
+    color: gray;
+    font-size: var(--small-font-size);
+}
+
+.contactInfo{
+    align-items: flex-start;
+}
+
+
+.contactInfo .setInfoDetail .setInfoDetailTitle{
+    padding-right: 1rem;
+}
+
+.profileDetails .blackFillButton{
+    width: 100%;
+    text-align: center;
+    font-weight: var(--font-semi-bold);
+}
+
+.contactInfo .setInfoDetail .setInfoDetailTitle{
+    color: var(--default-color);
+}
+
+@media screen and (max-width: 1267px) {
+
+    .setContent .blackFillButton{
+        width: 100%;
+    }
+
+    .profileWrapper{
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .profileContent{
+        align-self: flex-start;
+        width: 100%;
+    }
+
+    .profileContent img{
+        align-self: center;
+    }
+
+    .profileContentContainer{
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        align-self: flex-start;
+        justify-self: flex-start;
+    }
+
+    .setInformation{
+        width: 100%;
+    }
+
+    .setContent{
+        width: 100%;
+    }
+
+    .setContent .changePassword{
+        align-self: center;
+    }
+
+    .profileDetails{
+        width: 100%;
+    }
+
+    .generalInfoContainer{
+        width: 100%;
+    }
+
+    .profileContent img{
+        width: 30%;
+    }
+
+    
+}
+
+
+@media screen and (max-width: 715px){
+    .profileContainer{
+        padding: 4rem 2rem;
+    }
+
+    .profileWrapper{
+        width: 95%;
+        padding: 4rem 2rem;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .profileWrapper{
+        padding: 4rem 1rem;
+    }
+
+    .profileContent img{
+        width: 40%;
+    }
+
+    .setContent .changePassword button{
+        font-size: var(--smaller-font-size);
+        padding: 1rem;
+        width: 80%;
+    }
+
+    .setContent{
+        padding: 4rem 1.5rem;
+    }
+
+    .setInfoDetailTitle{
+        padding-right: 0;
+    }
+
+    .professionalInformation {
+        padding: 4rem 1.5rem;
+    }
+
+    .contactInfo .setInfoDetail .setInfoDetailTitle{
+        padding-right: 0;
+    }
+}
+

@@ -1590,3 +1590,209 @@ textarea{
     left: 240px;
 }
 
+
+/* ====================================   Items Index    ================================ */
+.itemIndexContainer{
+    width: 100%;
+    background: url("../img/bg_black_marble.jpg");
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.ItemIndexMain{
+    background-color: var(--text-color);
+    width: 90%;
+}
+
+.topItemContainer{
+    width: 100%;
+    margin-top: 2rem;
+    padding: 0 2rem;
+}
+
+.ItemMainUpper{
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.itemCompanyDetails{
+    align-items: flex-start;
+    row-gap: 0;
+}
+
+.itemCompanyName{
+    color: var(--default-color);
+    font-size: var(--h1-font-size);
+    line-height: var(--h1-font-size);
+}
+
+.itemComapanyType{
+    color: var(--first-color-alt);
+    font-weight: var(--font-semi-bold);
+}
+
+.itemComapanyAddress, .itemCompanyOwner{
+    color: var(--first-color-light);
+    font-size: var(--smaller-font-size);
+}
+
+
+
+.itemCompanyOwner{
+    text-align: center;
+}
+
+.itemCompanyImageContainer{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemCompanyImageContainer img{
+    transform: scale(2);
+}
+
+.itemCompanyDetails .blackFillButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.searchArea{
+    justify-content: space-between;
+    background-color: var(--text-color);
+    border: 2px solid var(--text-color-light);
+    border-radius: 1.5rem;
+    padding: 1rem 1rem;
+    margin-top: 1rem;
+    color: var(--text-color-light);
+    font-size: var(--h3-font-size);
+}
+
+.itemSearchDiv{
+    width: 70%;
+    justify-content: flex-start;
+    column-gap: 0.3rem;
+}
+
+.itemSearchDiv input{
+    font-size: var(--small-font-size);
+    outline: none;
+    width: 100%;
+    /* padding: 0.5rem 0.5rem; */
+    border: none;
+    color: var(--first-color-light);
+    font-weight: var(--font-semi-bold);
+    background: transparent;
+}
+
+.itemSearchDiv input::placeholder{
+    color: var(--text-color-light);
+}
+
+
+.searchArea select{
+    width: 20%;
+    padding: 0.2rem 1rem;
+    font-weight: var(--font-semi-bold);
+    color: var(--first-color-light);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.searchArea select option{
+    padding: 1rem 1rem;
+}
+
+.itemsCountHeading{
+    justify-self: flex-start;
+    align-self: flex-start;
+    padding: 1rem 0.5rem;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+    color: var(--default-color);
+}
+
+
+.ItemsTable{
+    width: 100%;
+    padding-top: 0;
+    row-gap: 0;
+}
+
+.ItemsTable .userUpdateLink .blackFillButton{
+    padding: 0.5rem 3rem;
+}
+
+@media screen and (max-width: 1100px) {
+    .searchArea select{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .searchArea select{
+        width: 30%;
+    }
+
+    .ItemMainUpper{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    
+    .itemCompanyDetails{
+        align-items: center;
+    }
+
+    .itemCompanyName, .itemComapanyAddress, .itemCompanyOwner{
+        text-align: center;
+    }
+
+    .itemSearchDiv{
+        width: 50%;
+    }
+
+    .searchArea select {
+        width: 50%;
+    }
+
+    .itemIndexContainer{
+        padding: 4rem 2rem;
+    }
+}
+
+@media screen and (max-width: 625px) {
+    .itemIndexContainer{
+        padding: 4rem 0.2rem;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .ItemsTable .userUpdateLink .blackFillButton{
+        padding: 0.5rem 1.5rem !important;
+    }
+
+    .ItemsTable .userRemoveLink .whiteFillButton{
+        padding: 0.5rem 0.5rem !important;
+    }
+
+    .searchArea{
+        flex-direction: column;
+        row-gap: 0.5rem;
+    }
+
+    .searchArea .itemSearchDiv{
+        width: 100%;
+    }
+
+    .searchArea select{
+        width: 100%;
+    }
+}

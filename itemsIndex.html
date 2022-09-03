@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Items</title>
+    <!-- ==========     Link for Box Icons      ======= -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="itemIndexContainer l-section verticalFlexContainer">
+        <div class="ItemIndexMain verticalFlexContainer">
+            <div class="topItemContainer">
+                <div class="ItemMainUpper flexContainer">
+                    <div class="verticalFlexContainer itemCompanyDetails">
+                        <h1 class="itemCompanyName">MAB CORP</h1>
+                        <span class="itemComapanyType">Marble</span>
+                        <span class="itemComapanyAddress">House no 33, Usman Park Daroghawala Lahore</span>
+                        <a href="" class="blackFillButton"><i class='bx bx-plus-circle'></i>Add New Item</a>
+                    </div>
+
+                    <div class="verticalFlexContainer itemOwnerDetails">
+                        <div class="itemCompanyImageContainer">
+                            <img src="img/bg2.jpg" alt="Profile">
+                        </div>
+                        <span class="itemCompanyOwner">Muhammad Abdullah Butt</span>
+                    </div>
+                </div>
+
+                <div class="searchArea l-section flexContainer">
+                    <div class="itemSearchDiv flexContainer">
+                        <i class='bx bx-search'></i>
+                        <input type="search" placeholder="Search for items here...">
+                    </div>
+                    
+                    <select name="" id="">
+                        <option value="1">Chinese Marble</option>
+                    </select>
+                </div>
+                <h6 class="itemsCountHeading">26 Items Found</h1>
+            </div>
+            <div class="verticalFlexContainer registeredUsersContainer ItemsTable">
+
+        
+                <table class="table">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Last Updated</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Remove</th>
+                        </tr>
+                    </thead>
+            
+                    <tbody>
+                        <tr>
+                            <th data-title = "Name" scope="row">Black Tile</th>
+                            <th data-title = "Price">3</th>
+                            <th data-title = "Type">Marble</th>
+                            <th data-title = "Last Updated">03 Dec 2022</th>
+                            <th class="userUpdateLink "><a href="" class="blackFillButton">Edit</a></th>
+                            <th class="userRemoveLink"><a href="" class="whiteFillButton">Remove</a></th>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1946,3 +1946,68 @@ textarea{
         align-self: flex-end;
     }
 }
+
+
+/* ====================================   Show Project    ================================ */
+.topLeftProject .clientName{
+    color: var(--first-color-alt);
+    font-size: var(--h3-font-size);
+}
+
+.projectRemarksContainer{
+    width: 100%;
+    justify-content: space-evenly;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.projectCounter{
+    min-width: 15rem;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+}
+
+.projectRemarksContainer .middleCounter{
+    background-color: var(--first-color);
+    color: var(--first-color);
+}
+
+.projectRemarksContainer .leftCounter{
+    background-color: var(--default-color);
+    color: var(--default-color);
+}
+
+.projectRemarksContainer .rightCounter{
+    background-color: var(--first-color-alt);
+    color: var(--first-color-alt);
+}
+
+.projectCounter .innerCounterContainer{
+    width: 14rem;
+    height: 14rem;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.projectCounter .innerCounterContainer h1{
+    font-size: var(--h3-font-size);
+}
+
+.projectCounter .innerCounterContainer p{
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-bold);
+}
+
+.projectContentContainer{
+    margin: 2rem 0;
+}
+
+.projectContentContainer .section__title{
+    font-size: var(--h2-font-size);
+}

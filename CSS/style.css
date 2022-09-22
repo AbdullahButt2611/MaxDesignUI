@@ -18,6 +18,12 @@
     --text-color-light: #e0e0e0; 
     --default-color: #7E0c17;
 
+    --hue-color: 206;
+    --text-gradient: linear-gradient(hsl(var(--hue-color),4%,24%), hsl(var(--hue-color),4%,8%));
+    --body-color: hsl(var(--hue-color),4%,6%);
+    --scroll-thumb-color: hsl(var(--hue-color),4%,16%);
+    --scroll-thumb-color-alt: hsl(var(--hue-color),4%,20%);
+
 
     /*              Typographhy          */
     --body-font: 'Poppins', sans-serif;
@@ -27,6 +33,10 @@
     --normal-font-size: 1.1rem;
     --small-font-size: 0.938rem;
     --smaller-font-size: 0.85rem;
+
+    --biggest-font-size: 3rem;
+    --bigger-font-size: 2rem;
+    --big-font-size: 1rem;
 
     /*              Font weight          */
     --font-medium: 500;
@@ -52,6 +62,10 @@
         --normal-font-size: 1.25rem;
         --small-font-size: 1rem;
         --smaller-font-size: 0.95rem;
+
+        --biggest-font-size: 5rem;
+        --bigger-font-size: 3.5rem;
+        --big-font-size: 2.5rem;
     }
 }
 
@@ -161,6 +175,34 @@ img{
     display: flex;
     width: 100%;
     justify-content: space-between;
+}
+
+.dash__title{
+    font-size: var(--biggest-font-size);
+    background: var(--text-gradient);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    line-height: 6rem;
+    text-align: center;
+}
+
+.dash__title__helper{
+    font-size: var(--bigger-font-size);
+    color: var(--text-color);
+    text-align: center;
+}
+
+.dash__title__helper__emergent{
+    font-size: var(--bigger-font-size);
+    color: var(--default-color);
+    text-align: center;
+}
+
+@media screen and (max-width: 780px){
+    .dash__title{
+        line-height: 4rem;
+    }
 }
 
 
@@ -337,6 +379,21 @@ header{
     .show{
         right: 0;
     }
+}
+
+/* =================================================     Scroll Bar    ==================================================== */
+::-webkit-scrollbar{
+    width: 0.60rem;
+    border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--scroll-thumb-color);
+    border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: var(--scroll-thumb-color-alt);
 }
 
 
@@ -2011,3 +2068,186 @@ textarea{
 .projectContentContainer .section__title{
     font-size: var(--h2-font-size);
 }
+
+
+/* ====================================   Dashboard    ================================ */
+.dashboardMainContainer{
+    width: 100%;
+    background-color: var(--first-color);
+    color: white;
+}
+
+.dashboard__img{
+    width: 25%;
+}
+
+.dashboardSection{
+    margin: 3rem 0;
+    width: 100%;
+    border-radius: 2rem;
+    padding: 3rem 3rem;
+}
+
+.dashboardSection .leftRightContainer h1{
+    font-size: var(--bigger-font-size);
+    text-align: center;
+}
+
+
+.dashboardCards{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.dashboardCard{
+    border-radius: 1rem;
+    padding: 2rem 2rem;
+    background-color: var(--first-color);
+    min-width: 18rem;
+    width: 32%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.dashboardCard .leftIcon i{
+    font-size: var(--biggest-font-size);
+}
+
+.dashboardCard .rightDash{
+    text-align: center;
+}
+
+.dashboardCard .rightDash .dashCardTitle{
+    font-size: var(--small-font-size);
+}
+
+@media screen and (max-width: 1230px)
+{
+    .dashboardCard{
+        width: 47%;
+    }
+
+}
+
+@media screen and (max-width: 950px)
+{
+    .dashboardCard{
+        width: 100%;
+    }
+
+    .dashboardCard .leftIcon i{
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width: 570px)
+{
+    .dashboardMainContainer{
+        padding: 4rem 1rem;
+    }
+}
+
+@media screen and (max-width: 425px)
+{
+    .dashboardSection{
+        padding: 3rem 1rem;
+    }
+}
+
+@media screen and (max-width: 332px)
+{
+    .dashboardCard{
+        min-width: auto;
+        flex-direction: column;
+    }
+
+    .dash__title{
+        font-size: 2rem;
+    }
+}
+
+.projectDashboardSection{
+    background: var(--text-gradient);
+}
+
+.projectDashboardSection .dashboardCard .leftIcon i{
+    background: var(--text-gradient);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.projectDashboardSection .dashboardCard .rightDash .dashCardTitle{
+    background: var(--text-gradient);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+
+
+.orderDashboardSection{
+    background: var(--default-color);
+}
+
+.orderDashboardSection .dashboardCard .leftIcon i{
+    background: var(--default-color);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.orderDashboardSection .dashboardCard .rightDash .dashCardTitle{
+    background: var(--default-color);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+
+
+
+
+.userDashboardSection .dashboardCard .leftIcon i{
+    background: var(--first-color-alt);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.userDashboardSection .leftRightContainer h1{
+    color: var(--first-color-alt);
+}
+
+
+
+.detailDashboardSection{
+    background: var(--first-color-light);
+}
+
+.detailDashboardSection .dashboardCard .leftIcon i{
+    background: var(--first-color-light);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.detailDashboardSection .dashboardCard .rightDash .dashCardTitle{
+    background: var(--first-color-light);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+
+.unallowedDashboardSection .leftRightContainer h1{
+    color: var(--first-color-alt);
+}
+
+
+
